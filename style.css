@@ -273,4 +273,24 @@ body {
     .playlist-card {
         padding: 10px;
     }
+/* Search Page */
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 16px 20px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: #242424;
+    color: white;
+    font-size: 16px;
+}
+
+.search-input::placeholder {
+    color: #b3b3b3;
+}
+
+.search-input:focus {
+    outline: 2px solid #1db954;
 }
