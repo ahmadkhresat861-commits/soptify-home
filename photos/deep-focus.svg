@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#263f46"/>
+      <stop offset=".55" stop-color="#142a35"/>
+      <stop offset="1" stop-color="#09151f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="310" cy="235" r="175" fill="#a7c9b7" opacity=".09"/>
+  <circle cx="310" cy="235" r="125" fill="#a7c9b7" opacity=".09"/>
+  <circle cx="310" cy="235" r="75" fill="none" stroke="#b6d6c4" stroke-width="2" opacity=".5"/>
+
+  <path d="M0 420 Q150 300 300 420 T600 400 V600 H0Z" fill="#0b2028"/>
+  <path d="M80 390 Q300 320 520 390" fill="none" stroke="#9bbfae" stroke-width="3" opacity=".5"/>
+  <path d="M120 420 Q300 360 480 420" fill="none" stroke="#9bbfae" stroke-width="2" opacity=".35"/>
+
+  <text x="38" y="510" fill="#fff" font-family="Arial" font-size="42" font-weight="bold" letter-spacing="3">DEEP</text>
+  <text x="38" y="558" fill="#fff" font-family="Arial" font-size="42" font-weight="bold" letter-spacing="3">FOCUS</text>
+</svg>

@@ -1,0 +1,276 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 230px;
+    background-color: #000000;
+    padding: 25px 20px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 26px;
+    margin-bottom: 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.sidebar nav a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    color: #ffffff;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 30px;
+    color: #777777;
+    font-size: 12px;
+}
+
+.sidebar-bottom p {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px 30px;
+    overflow-x: hidden;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.arrows {
+    display: flex;
+    gap: 12px;
+}
+
+.arrows button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.account-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.signup,
+.login {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.signup {
+    background: transparent;
+    color: #b3b3b3;
+}
+
+.signup:hover {
+    color: #ffffff;
+}
+
+.login {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 13px 28px;
+    border-radius: 25px;
+}
+
+.login:hover {
+    transform: scale(1.04);
+}
+
+/* =========================
+   MUSIC SECTIONS
+========================= */
+
+.music-section {
+    margin-bottom: 40px;
+}
+
+.music-section h1 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+/* =========================
+   PLAYLIST GRID
+========================= */
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.playlist-card {
+    background-color: #181818;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    min-width: 0;
+}
+
+.playlist-card:hover {
+    background-color: #282828;
+}
+
+.playlist-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.playlist-card h3 {
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.playlist-card p {
+    color: #b3b3b3;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+    .playlist-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+   SMALL SCREENS
+========================= */
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 160px;
+        padding: 20px 12px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .playlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .account-buttons {
+        gap: 10px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .music-section h1 {
+        font-size: 21px;
+    }
+
+    .playlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .playlist-card {
+        padding: 10px;
+    }
+}

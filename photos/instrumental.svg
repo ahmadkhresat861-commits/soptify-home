@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d9a96e"/>
+      <stop offset=".55" stop-color="#936044"/>
+      <stop offset="1" stop-color="#392c35"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="390" cy="220" r="160" fill="#ffe1a9" opacity=".15"/>
+
+  <path d="M170 150 L170 360 Q170 405 215 405 Q260 405 260 360 L260 150"
+        fill="none" stroke="#f5e6cb" stroke-width="17"/>
+  <path d="M260 150 L370 205 L370 390"
+        fill="none" stroke="#f5e6cb" stroke-width="17"/>
+  <circle cx="370" cy="405" r="28" fill="#f5e6cb"/>
+
+  <path d="M100 455 Q300 400 500 455" fill="none" stroke="#f5e6cb" stroke-width="3" opacity=".4"/>
+
+  <text x="38" y="510" fill="#fff" font-family="Arial" font-size="39" font-weight="bold" letter-spacing="2">INSTRUMENTAL</text>
+  <text x="38" y="555" fill="#fff" font-family="Arial" font-size="39" font-weight="bold" letter-spacing="2">STUDY</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d77ca1"/>
+      <stop offset=".55" stop-color="#79518c"/>
+      <stop offset="1" stop-color="#292442"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="245" r="175" fill="#ffc8dc" opacity=".15"/>
+
+  <circle cx="300" cy="250" r="115" fill="none" stroke="#f9d9e7" stroke-width="5" opacity=".8"/>
+  <circle cx="300" cy="250" r="82" fill="none" stroke="#f9d9e7" stroke-width="3" opacity=".5"/>
+  <circle cx="300" cy="250" r="48" fill="#f9d9e7" opacity=".85"/>
+
+  <path d="M300 215 L300 285 L355 250 Z" fill="#49334e"/>
+  <path d="M80 390 Q300 320 520 390" fill="none" stroke="#f9d9e7" stroke-width="4" opacity=".45"/>
+  <path d="M120 420 Q300 365 480 420" fill="none" stroke="#f9d9e7" stroke-width="3" opacity=".3"/>
+
+  <text x="38" y="515" fill="#fff" font-family="Arial" font-size="43" font-weight="bold" letter-spacing="3">CHILL</text>
+  <text x="38" y="562" fill="#fff" font-family="Arial" font-size="43" font-weight="bold" letter-spacing="3">BEATS</text>
+</svg>
