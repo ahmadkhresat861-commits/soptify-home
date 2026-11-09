@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - Sign up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <div class="signup-container">
+    <h1 class="spotify-logo">Spotify</h1>
+    <h2>Millions of songs.<br>Free on Spotify.</h2>
+
+    <!-- Screen 1: Sign up -->
+    <div id="signupScreen">
+      <button class="spotify-button" id="signupBtn">Sign up free</button>
+
+      <div class="signup-options">
+        <button class="social-button">Continue with phone number</button>
+        <button class="social-button">Continue with Google</button>
+        <button class="social-button">Continue with Facebook</button>
+      </div>
+
+      <p class="login-link">Already have an account? <a href="#" id="goToLogin">Log in</a></p>
+    </div>
+
+    <!-- Screen 2: Log in -->
+    <div id="loginScreen" class="hidden">
+      <form id="loginForm" class="auth-form">
+        <label for="email">Email address</label>
+        <input type="text" id="email" class="form-input" placeholder="example@gmail.com">
+        <p class="error-message" id="emailError"></p>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-input">
+        <p class="error-message" id="passwordError"></p>
+
+        <button type="submit" class="spotify-button">Log in</button>
+        <p class="success-message" id="successMsg"></p>
+      </form>
+
+      <p class="login-link"><a href="#">Forgot your password?</a></p>
+      <p class="login-link">Don't have an account? <a href="#" id="goToSignup">Sign up</a></p>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

@@ -197,6 +197,172 @@ body {
 }
 
 /* =========================
+   SEARCH PAGE
+========================= */
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 16px 20px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: #242424;
+    color: white;
+    font-size: 16px;
+}
+
+.search-input::placeholder {
+    color: #b3b3b3;
+}
+
+.search-input:focus {
+    outline: 2px solid #1db954;
+}
+
+/* =========================
+   SIGN UP / LOG IN PAGE
+========================= */
+
+.auth-page {
+    background: linear-gradient(135deg, #242424, #121212);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 350px;
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.signup-container .spotify-logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.signup-container h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.spotify-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1DB954;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.spotify-button:hover {
+    background-color: #1ed760;
+}
+
+.signup-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-button {
+    width: 100%;
+    padding: 11px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #727272;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.social-button:hover {
+    border-color: white;
+}
+
+.login-link {
+    color: #b3b3b3;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.login-link a {
+    color: white;
+    font-weight: bold;
+}
+
+/* =========================
+   LOG IN FORM + VALIDATION
+========================= */
+
+.auth-form {
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    background-color: #121212;
+    color: white;
+    border: 1px solid #727272;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.error-message {
+    color: #ff5c5c;
+    font-size: 13px;
+    margin-top: 6px;
+    min-height: 16px;
+}
+
+.success-message {
+    color: #1db954;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.auth-form .spotify-button {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================
    TABLET
 ========================= */
 
@@ -273,24 +439,4 @@ body {
     .playlist-card {
         padding: 10px;
     }
-/* Search Page */
-.search-input {
-    width: 100%;
-    max-width: 500px;
-    padding: 16px 20px;
-    margin-top: 25px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    background-color: #242424;
-    color: white;
-    font-size: 16px;
-}
-
-.search-input::placeholder {
-    color: #b3b3b3;
-}
-
-.search-input:focus {
-    outline: 2px solid #1db954;
 }
