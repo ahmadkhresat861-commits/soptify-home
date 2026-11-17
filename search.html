@@ -8,50 +8,148 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="has-player">
 
     <div class="app">
 
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <h2 class="logo">Spotify</h2>
+            <h2 class="logo">
+                <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="none" stroke="#ffffff" stroke-width="3"></circle>
+                    <path d="M13 18c8-2 16-1 23 3M14 25c7-2 14-1 20 2M15 32c6-1 11-1 16 1"
+                          fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"></path>
+                </svg>
+                Spotify
+            </h2>
 
-            <nav>
-                <nav class="main-navigation">
-    <a href="index.html" class="nav-item active">Home</a>
-    <a href="search.html" class="nav-item">Search</a>
-    <a href="#" class="nav-item">Your Library</a>
-</nav>
-</nav>
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="search.html" class="nav-item">Search</a>
+                <a href="#" class="nav-item">Your Library</a>
+                <a href="liked.html" class="nav-item">Liked Songs</a>
             </nav>
+
+            <div class="sidebar-bottom">
+                <div class="legal-links">
+                    <a href="#">Legal</a>
+                    <a href="#">Privacy Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">About</a>
+                    <a href="#">Ads</a>
+                </div>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
         </aside>
 
         <main class="main-content">
 
+            <!-- Top Bar -->
             <header class="topbar">
-                <div class="arrows">
-                    <button onclick="history.back()">&lsaquo;</button>
-                    <button onclick="history.forward()">&rsaquo;</button>
+                <div class="topbar-left">
+                    <div class="arrows">
+                        <button onclick="history.back()">&lsaquo;</button>
+                        <button onclick="history.forward()">&rsaquo;</button>
+                    </div>
+
+                    <input type="search" id="searchInput" class="search-input" placeholder="Artists, songs, or podcasts">
                 </div>
 
-                <div class="account-buttons">
-                    <button class="signup">Sign up</button>
-                    <button class="login">Log in</button>
+                <div class="topbar-right">
+                    <button class="premium-btn">Explore Premium</button>
+                    <div class="avatar"></div>
                 </div>
             </header>
 
-            <section class="music-section">
-                <h1>Search</h1>
+            <!-- Genres -->
+            <section class="music-section" id="genreSection">
 
-                <input
-                    type="search"
-                    placeholder="What do you want to play?"
-                    class="search-input"
-                >
+                <div class="section-header">
+                    <h1>Your Favourite</h1>
+                </div>
+
+                <div class="genre-grid">
+                    <div class="genre-card genre-pop">Pop</div>
+                    <div class="genre-card genre-bollywood">Bollywood</div>
+                    <div class="genre-card genre-podcasts">Podcasts</div>
+                    <div class="genre-card genre-new">New Releases</div>
+
+                    <div class="genre-card genre-charts">Charts</div>
+                    <div class="genre-card genre-concerts">Concerts</div>
+                    <div class="genre-card genre-made">Made for You</div>
+                    <div class="genre-card genre-home">At Home</div>
+
+                    <div class="genre-card genre-rock">Rock</div>
+                    <div class="genre-card genre-hiphop">Hip-Hop</div>
+                    <div class="genre-card genre-dance">Dance</div>
+                    <div class="genre-card genre-indie">Indie</div>
+                </div>
+
+            </section>
+
+            <!-- Search results -->
+            <section class="music-section hidden" id="searchResults">
+                <div class="section-header">
+                    <h1>Results</h1>
+                </div>
+                <div id="resultsList"></div>
             </section>
 
         </main>
 
     </div>
 
+    <!-- Music player -->
+    <footer class="player-bar">
+
+        <div class="player-left">
+            <div class="player-thumb" id="playerThumb"></div>
+            <div class="player-info">
+                <div class="player-title" id="playerTitle">Select a song</div>
+                <div class="player-artist" id="playerArtist">to start listening</div>
+            </div>
+            <button class="heart-btn" id="playerHeart" aria-label="Like"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+        </div>
+
+        <div class="player-center">
+            <div class="player-controls">
+                <button class="icon-btn" aria-label="Shuffle">
+                    <svg viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+                </button>
+                <button class="icon-btn" id="prevBtn" aria-label="Previous">
+                    <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM20 6v12L9.5 12z"/></svg>
+                </button>
+                <button class="icon-btn play-circle js-play-toggle" aria-label="Play or pause">
+                    <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                </button>
+                <button class="icon-btn" id="nextBtn" aria-label="Next">
+                    <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM4 6v12l10.5-6z"/></svg>
+                </button>
+                <button class="icon-btn" aria-label="Repeat">
+                    <svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+                </button>
+            </div>
+
+            <div class="player-progress">
+                <span id="currentTimeText">0:00</span>
+                <input type="range" id="progressBar" min="0" max="100" value="0" aria-label="Song progress">
+                <span id="totalTimeText">0:00</span>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <svg class="volume-icon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+            <input type="range" id="volumeBar" min="0" max="100" value="70" aria-label="Volume">
+        </div>
+
+    </footer>
+
+    <script src="songs.js"></script>
+    <script src="favorites.js"></script>
+    <script src="player.js"></script>
+    <script src="search.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

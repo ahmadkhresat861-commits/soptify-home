@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Songs | Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">
+                <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="none" stroke="#ffffff" stroke-width="3"></circle>
+                    <path d="M13 18c8-2 16-1 23 3M14 25c7-2 14-1 20 2M15 32c6-1 11-1 16 1"
+                          fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"></path>
+                </svg>
+                Spotify
+            </h2>
+
+            <nav class="main-navigation">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="search.html" class="nav-item">Search</a>
+                <a href="#" class="nav-item">Your Library</a>
+                <a href="liked.html" class="nav-item">Liked Songs</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="legal-links">
+                    <a href="#">Legal</a>
+                    <a href="#">Privacy Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">About</a>
+                    <a href="#">Ads</a>
+                </div>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <div class="arrows">
+                        <button onclick="history.back()">&lsaquo;</button>
+                        <button onclick="history.forward()">&rsaquo;</button>
+                    </div>
+                </div>
+
+                <div class="account-buttons">
+                    <button class="signup" onclick="location.href='signup.html'">Sign up</button>
+                    <button class="login" onclick="location.href='signup.html'">Log in</button>
+                </div>
+            </header>
+
+            <!-- View 1: the list  (#/likedSongs) -->
+            <div id="listView">
+                <section class="liked-header">
+                    <p class="playlist-type">Playlist</p>
+                    <h1 class="playlist-title">Liked Songs</h1>
+                    <p class="playlist-meta" id="likedCount">0 liked</p>
+                </section>
+
+                <section id="likedList"></section>
+            </div>
+
+            <!-- View 2: one item  (#/likedSongs/:id) -->
+            <div id="detailView" class="hidden"></div>
+
+        </main>
+
+    </div>
+
+    <script src="songs.js"></script>
+    <script src="favorites.js"></script>
+    <script src="liked.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
